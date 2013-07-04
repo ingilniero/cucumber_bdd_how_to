@@ -1,3 +1,5 @@
+Capybara.javascript_driver = :webkit
+
 Given(/^I am on Amazon homepage$/) do
   visit "http://www.amazon.com"
 end

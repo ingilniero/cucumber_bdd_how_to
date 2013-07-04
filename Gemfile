@@ -39,6 +39,7 @@ group :test do
   gem 'launchy'
   #bundle update selenium-webdriver
   gem 'selenium-webdriver'
+  gem 'capybara-webkit'
 end
 
 # Use ActiveModel has_secure_password
