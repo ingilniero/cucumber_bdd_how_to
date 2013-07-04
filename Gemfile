@@ -37,6 +37,8 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'launchy'
+  #bundle update selenium-webdriver
+  gem 'selenium-webdriver'
 end
 
 # Use ActiveModel has_secure_password
