@@ -25,6 +25,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
+    @comment.post = Post.find_by_id(comment_params[:post_id])
 
     respond_to do |format|
       if @comment.save
@@ -56,7 +57,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url }
+      format.html { redirect_to post_url(@comment.post) }
       format.json { head :no_content }
     end
   end
